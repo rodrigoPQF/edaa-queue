@@ -22,13 +22,25 @@ public class Main{
 
             if(leter == '0'){
                 cont = true;
+            }else {
+                queu.push(leter);
+
             }
-            queu.push(leter);
         }
 
         while (!queu.isEmpty()){
             char x = queu.pop();
             System.out.println("Retirei o elemento " + x);
+        }
+        while (!queu.isEmptyLow()){
+            char lower = queu.popLow();
+            System.out.println("Elemento Minusculo retirado " + lower);
+
+        }
+        while (!queu.isEmptyUpp()){
+            char upper = queu.popUp();
+            System.out.println("Elemento Maiusculo retirado " + upper);
+
         }
 
 
